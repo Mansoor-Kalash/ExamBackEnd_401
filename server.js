@@ -7,7 +7,7 @@ server.use(express.json());
 const port = process.env.PORT;
 const mongoose = require("mongoose");
 const { default: axios } = require("axios");
-mongoose.connect("mongodb://localhost:27017/DB_NAME", {
+mongoose.connect(`${process.env.mongo_link}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
