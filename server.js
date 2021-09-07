@@ -90,7 +90,7 @@ function updateDataOfChoco(req, res) {
     } else {
       updateData.title = title;
       updateData.save().then(() => {
-        ChoclateModel.find({ email: emaill }, function (err, afterUpdata) {
+        ChoclateModel.find({ email: email }, function (err, afterUpdata) {
           if (err) {
             console.log("error in getting data aftar update it");
           } else {
